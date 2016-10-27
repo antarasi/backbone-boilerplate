@@ -3,10 +3,17 @@ module.exports = ->
 
   @config 'connect',
     options:
-      hostname: '0.0.0.0'
-      port: 8000
+      hostname: 'localhost'
+      port: 3000
+      open: true
+      base: 'dist'
 
-    development: {}
+    development:
+      options:
+        middleware: (connect) -> [
+          require('connect-livereload')()
+          require('serve-static')('dist')
+        ]
 
     release:
       options:
@@ -15,4 +22,4 @@ module.exports = ->
 
     test:
       options:
-        port: 8001
+        port: 3001

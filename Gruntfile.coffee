@@ -14,6 +14,8 @@ module.exports = ->
   @registerTask "development", [
     "browserify:development"
     "browserify:testing"
+		"processhtml"
+		"copy"
     "connect:development"
     "watch"
   ]
@@ -26,7 +28,7 @@ module.exports = ->
     "processhtml"
     "copy"
     "cssmin"
-    "karma:run"
+#    "karma:run"
   ]
 
   # Alias to development.
