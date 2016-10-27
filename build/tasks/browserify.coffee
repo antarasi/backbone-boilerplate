@@ -5,6 +5,7 @@ module.exports = ->
   @config 'browserify',
     options:
       transform: [
+        'coffeeify'
 #        'babelify'
       ]
       watch: true

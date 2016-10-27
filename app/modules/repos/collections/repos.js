@@ -1,7 +1,7 @@
 'use strict';
 
 var Backbone = require('backbone');
-var Repo = require('../models/repo');
+var Repo = require('../models/repo.coffee');
 
 module.exports = Backbone.Collection.extend({
 	model: Repo,
