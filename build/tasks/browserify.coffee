@@ -6,13 +6,13 @@ module.exports = ->
     options:
       transform: [
         'coffeeify'
-#        'babelify'
       ]
       watch: true
 
     development:
       options:
         browserifyOptions:
+          extensions: ['.coffee']
           debug: true
 
       src: 'app/main.js'
@@ -20,6 +20,8 @@ module.exports = ->
 
     production:
       options:
+        browserifyOptions:
+          extensions: ['.coffee']
         configure: (bundler) ->
           bundler.transform(global: true, 'uglifyify')
 
