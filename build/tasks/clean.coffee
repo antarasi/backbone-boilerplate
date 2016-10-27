@@ -5,4 +5,5 @@ module.exports = ->
   @config 'clean', [
     'dist/'
     'test/reports'
+    'app/styles/compiled'
   ]

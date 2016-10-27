@@ -15,6 +15,8 @@ module.exports = ->
     "browserify:development"
     "browserify:testing"
 		"processhtml"
+    "sass"
+    "concat:development"
 		"copy"
     "connect:development"
     "watch"
@@ -26,8 +28,9 @@ module.exports = ->
     "browserify:production"
     "browserify:testing"
     "processhtml"
-    "copy"
+    "sass"
     "cssmin"
+    "copy"
 #    "karma:run"
   ]
 
