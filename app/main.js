@@ -3,7 +3,11 @@
 var $ = require('jquery');
 var MainView = require('./modules/main/views/main');
 
-// The only thing that should be in a DOMReady
+// for IE no transport error.
+// THE FOLLOWING LINE SHOULD BE REMOVED IF YOU WON'T USE CROSS ORIGIN REQUESTS
+$.support.cors = true;
+
+// on DOMReady
 $(function() {
 	var mainView = new MainView();
 	mainView.render();

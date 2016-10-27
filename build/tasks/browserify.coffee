@@ -1,8 +1,7 @@
 module.exports = ->
   @loadNpmTasks 'grunt-browserify'
 
-  # This task uses the Browserify optimizer and the Babelify transform to
-  # optimize the ES6 modules.
+  # This task uses the Browserify optimizer
   @config 'browserify',
     options:
       transform: [
