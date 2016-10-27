@@ -7,6 +7,7 @@ module.exports = ->
     scripts:
       files: [
         'app/**/*.js'
+        'app/**/*.coffee'
       ]
 #			tasks: ['jshint']
       options:
