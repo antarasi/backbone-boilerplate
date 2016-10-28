@@ -1,6 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
 var MainView = require('./modules/main/views/main');
 
 // for IE no transport error.

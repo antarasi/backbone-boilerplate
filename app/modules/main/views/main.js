@@ -1,7 +1,5 @@
 'use strict';
 
-var Backbone = require('backbone');
-var _ = require('underscore');
 var ReposView = require('../../repos/views/repos');
 
 module.exports = Backbone.View.extend({

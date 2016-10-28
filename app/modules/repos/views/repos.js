@@ -1,8 +1,5 @@
 'use strict';
 
-var Backbone = require('backbone');
-var _ = require('underscore');
-
 var ReposCollection = require('../collections/repos');
 var RepoView = require('./repo');
 

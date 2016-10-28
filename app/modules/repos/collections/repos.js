@@ -1,6 +1,5 @@
 'use strict';
 
-var Backbone = require('backbone');
 var Repo = require('../models/repo');
 
 module.exports = Backbone.Collection.extend({
