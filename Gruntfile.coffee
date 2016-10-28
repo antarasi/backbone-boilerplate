@@ -18,6 +18,7 @@ module.exports = ->
     "sass"
     "concat:development"
 		"copy"
+    "imagemin"
     "connect:development"
     "watch"
   ]
@@ -31,6 +32,7 @@ module.exports = ->
     "sass"
     "cssmin"
     "copy"
+    "imagemin"
 #    "karma:run"
   ]
 

@@ -32,3 +32,13 @@ module.exports = ->
       options:
         spawn: false
         livereload: true
+
+    images:   # use ctrl+shift+R if reload does not work
+      files: [
+        'app/styles/img/**/*.{png,jpg,gif}'
+        'app/img/**/*.{png,jpg,gif}'
+      ]
+      tasks: ['imagemin']
+      options:
+        spawn: false
+        livereload: true
