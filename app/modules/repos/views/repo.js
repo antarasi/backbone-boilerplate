@@ -1,8 +1,11 @@
 'use strict';
 
+var fs = require('fs');
+var template = fs.readFileSync(__dirname + '/repo.html', 'utf8');
+
 module.exports = Backbone.View.extend({
 	tagName: 'li',
-	template: _.template('<span><%- id %> - <%- name %><%- extension %></span>'),
+	template: _.template(template),
 
 	initialize: function() {
 		this.listenTo(this.model, 'change', this.render);

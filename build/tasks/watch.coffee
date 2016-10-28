@@ -14,6 +14,15 @@ module.exports = ->
         spawn: false
         livereload: true
 
+    templates:
+      files: [
+        'app/**/*.html'
+      ]
+      options:
+        spawn: false
+        livereload: true
+
+
     styles:
       files: [
         'app/**/*.scss'

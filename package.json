@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "license": "MIT",
   "devDependencies": {
+    "brfs": "^1.4.3",
+    "coffeeify": "^2.0.1",
     "connect-livereload": "~0.6.0",
     "grunt": "~1.0.1",
     "grunt-browserify": "~5.0.0",
@@ -16,8 +18,7 @@
     "grunt-contrib-watch": "~1.0.0",
     "grunt-processhtml": "~0.4.1",
     "serve-static": "~1.11.1",
-    "uglifyify": "~3.0.1",
-    "coffeeify": "^2.0.1"
+    "uglifyify": "~3.0.1"
   },
   "scripts": {
     "start": "grunt",

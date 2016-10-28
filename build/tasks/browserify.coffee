@@ -6,6 +6,7 @@ module.exports = ->
     options:
       transform: [
         'coffeeify'
+        'brfs'
       ]
       watch: true
 
