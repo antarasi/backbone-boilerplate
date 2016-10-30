@@ -14,7 +14,6 @@ module.exports = ->
   @registerTask "development", [
     "browserify:development"
     "browserify:testing"
-		"processhtml"
     "sass"
     "concat:development"
 		"copy"
@@ -28,7 +27,6 @@ module.exports = ->
     "clean"
     "browserify:production"
     "browserify:testing"
-    "processhtml"
     "sass"
     "cssmin"
     "copy"

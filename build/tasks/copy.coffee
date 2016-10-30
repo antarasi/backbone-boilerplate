@@ -6,5 +6,6 @@ module.exports = ->
   @config 'copy',
     release:
       files: [
-        cwd: 'app/assets', src: '**', dest: 'dist/', expand: true
+        (src: 'app/index.html', dest: 'dist/index.html')
+        (cwd: 'app/assets', src: '**', dest: 'dist/', expand: true)
       ]
