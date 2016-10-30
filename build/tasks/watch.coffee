@@ -9,7 +9,6 @@ module.exports = ->
         'app/**/*.js'
         'app/**/*.coffee'
       ]
-#			tasks: ['jshint']
       options:
         spawn: false
         livereload: true
