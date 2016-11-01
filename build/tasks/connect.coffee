@@ -14,8 +14,3 @@ module.exports = ->
           require('connect-livereload')()
           require('serve-static')('dist')
         ]
-
-    release:
-      options:
-        keepalive: true
-        base: 'dist'

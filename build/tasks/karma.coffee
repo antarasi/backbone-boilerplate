@@ -9,7 +9,6 @@ module.exports = ->
       autoWatch: false
       logLevel: 'ERROR'
 
-      reporters: ['dots']
       browsers: ['PhantomJS']
 
       frameworks: ['jasmine', 'browserify']
@@ -20,18 +19,15 @@ module.exports = ->
         '/test/tests/**/*.coffee': [ 'browserify' ]
       }
 
-      browserify:
-        debug: true
-        transform: [
-          'coffeeify'
-          'brfs'
-        ]
-        extensions: ['.coffee']
+      coverageReporter:
+        type : 'html' # or text
+        dir : 'test/coverage/'
 
       plugins: [
         'karma-jasmine'
         'karma-phantomjs-launcher'
         'karma-browserify'
+        'karma-coverage'
       ]
 
       files: [
@@ -46,6 +42,8 @@ module.exports = ->
         {pattern: 'test/tests/**/*', watched: false, included: true, served: true}
       ]
 
+    # tasks: --------------------------------------------
+
     daemon:
       options:
         port: 3001
@@ -55,7 +53,28 @@ module.exports = ->
         # if tests are run twice upon file change - increase the delay
         autoWatchBatchDelay: 1000
 
+        reporters: ['dots']
+
+        browserify:
+          debug: true
+          transform: [
+            'coffeeify'
+            'brfs'
+          ]
+          extensions: ['.coffee']
+
     # This is useful for running the tests just once.
     once:
       options:
         singleRun: true
+
+        reporters: ['dots', 'coverage']
+
+        browserify:
+          debug: true
+          transform: [
+            'coffeeify'
+            'brfs'
+            'browserify-istanbul'
+          ]
+          extensions: ['.coffee']

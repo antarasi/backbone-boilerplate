@@ -3,3 +3,4 @@
 node_modules/*
 app/styles/compiled/*
 dist/*
+test/coverage
