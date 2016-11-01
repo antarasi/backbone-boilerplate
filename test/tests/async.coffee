@@ -22,7 +22,7 @@ describe "Asynchronous specs", ->
         if (counter <= 0)
           done()
         else
-          console.log(counter)
+          console.log('testing async '+counter)
           caller(counter-1)
 
       , 500)
