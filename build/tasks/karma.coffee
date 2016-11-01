@@ -10,7 +10,7 @@ module.exports = ->
       logLevel: 'ERROR'
 
       reporters: ['dots']
-      browsers: ['Chrome']
+      browsers: ['PhantomJS']
 
       frameworks: ['jasmine', 'browserify']
 
@@ -30,7 +30,7 @@ module.exports = ->
 
       plugins: [
         'karma-jasmine'
-        'karma-chrome-launcher'
+        'karma-phantomjs-launcher'
         'karma-browserify'
       ]
 
