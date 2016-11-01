@@ -6,11 +6,14 @@ var Router = require('./router');
 // THE FOLLOWING LINE SHOULD BE REMOVED IF YOU WON'T USE CROSS ORIGIN REQUESTS
 $.support.cors = true;
 
-var router = new Router();
-
 // on DOMReady
-$(function() {
-  Backbone.history.start({ pushState: true, root: '/' });
+jQuery(function($) {
+  new Router();
+  Backbone.history.start();
+  Backbone.history.on("route", function (route, router) {
+    // on hash change
+    console.log(window.location.hash);
+  });
 });
 
 $(document).on("click", "a:not([data-bypass])", function(evt) {

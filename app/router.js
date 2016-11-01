@@ -5,7 +5,9 @@ module.exports = Backbone.Router.extend({
     '': 'index',
     "help":                 "help",    // #help
     "search/:query":        "search",  // #search/kiwis
-    "search/:query/p:page": "search"   // #search/kiwis/p7
+    "search/:query/p:page": "search",   // #search/kiwis/p7
+
+    '*notFound': 'notFound'
   },
 
   index: function () {
@@ -16,9 +18,15 @@ module.exports = Backbone.Router.extend({
     });
   },
   help: function() {
-    console.log('help is called');
+    $(function() {
+      $('#appview').html('help is called'); // stub
+    });
   },
   search: function(query, page) {
+    $('#appview').html('Q: ' + query + ' P: ' + page); // stub
+  },
 
+  notFound: function () {
+    $('#appview').html('404 not found'); // stub, replace with your 404 page
   }
 });
