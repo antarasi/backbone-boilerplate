@@ -25,7 +25,19 @@ describe "Asynchronous specs", ->
           console.log('testing async '+counter)
           caller(counter-1)
 
-      , 500)
+      , 100)
 
     caller(5)
 
+  it 'should test api call', (done) ->
+    user = 'antarasi'
+    $.getJSON('https://api.github.com/users/'+user+'/repos')
+    .done((data, textStatus, jqXHR) ->
+      expect(data).toBeDefined()
+      expect(data).toEqual(jasmine.any(Array))
+      console.log('github tested')
+      done()
+    )
+    .fail((jqXHR, textStatus) ->
+      done.fail('textStatus: '+textStatus)
+    )
