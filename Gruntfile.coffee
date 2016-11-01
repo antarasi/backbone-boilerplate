@@ -17,7 +17,7 @@ module.exports = ->
 		"copy"
     "imagemin"
     "connect:development"
-    "karma:daemon:start watch"
+    "karma:daemon"
     "watch"
   ]
 

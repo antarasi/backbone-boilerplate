@@ -8,20 +8,10 @@ module.exports = ->
         'app/**/*.js'
         'app/**/*.coffee'
       ]
-      tasks: ['karma:daemon:run']
+#      tasks: ['karma:daemon:run']
       options:
         spawn: false
         livereload: true
-
-    # run test on test specs change
-    tests:
-      files: [
-        'test/tests/**/*.js'
-        'test/tests/**/*.coffee'
-      ]
-      tasks: ['karma:daemon:run']
-      options:
-        spawn: false
 
     # copy files & reload on html change
     templates:
