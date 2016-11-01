@@ -19,7 +19,3 @@ module.exports = ->
       options:
         keepalive: true
         base: 'dist'
-
-    test:
-      options:
-        port: 3001

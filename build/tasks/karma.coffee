@@ -1,38 +1,52 @@
 module.exports = ->
   @loadNpmTasks 'grunt-karma'
 
-  # Unit testing is provided by Karma.  Change the two commented locations
-  # below to either: mocha, jasmine, or qunit.
+  # Unit testing is provided by Karma.
   @config 'karma',
     options:
       basePath: process.cwd()
-      singleRun: true
       captureTimeout: 7000
-      autoWatch: true
+      autoWatch: false
       logLevel: 'ERROR'
 
       reporters: ['dots']
-      browsers: ['PhantomJS']
+      browsers: ['Chrome']
 
-      frameworks: ['mocha']
+      frameworks: ['jasmine', 'browserify']
+
+      preprocessors: {
+        '/test/tests/**/*.js': [ 'browserify' ]
+      }
+
+      browserify:
+        debug: true
+        transform: [
+          'coffeeify'
+          'brfs'
+        ]
+        extensions: ['.coffee']
 
       plugins: [
-        'karma-mocha'
-        'karma-phantomjs-launcher'
+        'karma-jasmine'
+        'karma-chrome-launcher'
+        'karma-browserify'
       ]
 
       files: [
-        'test/assert.js'
-        'dist/test-runner.js'
+        'node_modules/jquery/dist/jquery.js'
+        'node_modules/underscore/underscore.js'
+        'node_modules/backbone/backbone.js'
+        'dist/bundle.js'
+        'test/tests/**/*.js'
       ]
 
-    # This creates a server that will automatically run your tests when you
-    # save a file and display results in the terminal.
     daemon:
       options:
+        port: 3001
         singleRun: false
+        background: true
 
     # This is useful for running the tests just once.
-    run:
+    once:
       options:
         singleRun: true

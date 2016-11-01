@@ -28,7 +28,3 @@ module.exports = ->
 
       src: 'app/main.js'
       dest: 'dist/bundle.js'
-
-    testing:
-      src: 'test/runner.js'
-      dest: 'dist/test-runner.js'

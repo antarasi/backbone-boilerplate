@@ -1,26 +1,36 @@
 module.exports = ->
   @loadNpmTasks 'grunt-contrib-watch'
 
-  # This will watch the application for changes and automatically reload the
-  # page using LiveReload.
   @config 'watch',
+    # run test on app scripts change & reload
     scripts:
       files: [
         'app/**/*.js'
         'app/**/*.coffee'
       ]
+      tasks: ['karma:daemon:run']
       options:
         spawn: false
         livereload: true
 
+    # run test on test specs change
+    tests:
+      files: [
+        'test/tests/**/*.js'
+      ]
+      tasks: ['karma:daemon:run']
+      options:
+        spawn: false
+
+    # copy files & reload on html change
     templates:
       files: [
         'app/**/*.html'
       ]
+      tasks: ['copy', 'karma:daemon:run']
       options:
         spawn: false
         livereload: true
-
 
     styles:
       files: [
