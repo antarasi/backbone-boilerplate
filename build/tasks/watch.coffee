@@ -17,6 +17,7 @@ module.exports = ->
     tests:
       files: [
         'test/tests/**/*.js'
+        'test/tests/**/*.coffee'
       ]
       tasks: ['karma:daemon:run']
       options:

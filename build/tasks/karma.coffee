@@ -14,8 +14,10 @@ module.exports = ->
 
       frameworks: ['jasmine', 'browserify']
 
+    # using {js,coffee} pattern causes Cannot read property 'mtime' of undefined
       preprocessors: {
         '/test/tests/**/*.js': [ 'browserify' ]
+        '/test/tests/**/*.coffee': [ 'browserify' ]
       }
 
       browserify:
@@ -33,11 +35,15 @@ module.exports = ->
       ]
 
       files: [
+        #libraries
         'node_modules/jquery/dist/jquery.js'
         'node_modules/underscore/underscore.js'
         'node_modules/backbone/backbone.js'
+        #browserify bundle
         'dist/bundle.js'
+        #tests
         'test/tests/**/*.js'
+        'test/tests/**/*.coffee'
       ]
 
     daemon:

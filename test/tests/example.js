@@ -34,12 +34,3 @@ describe("Tests with before/after hooks", function() {
     expect(a).toBe(1);
   });
 });
-
-describe("Async tests", function() {
-  it("should wait timer", function(done) {
-    setTimeout(function() {
-      expect(true).toBe(true);
-      done();
-    }, 500);
-  });
-});
