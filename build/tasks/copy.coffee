@@ -1,8 +1,7 @@
 module.exports = ->
   @loadNpmTasks 'grunt-contrib-copy'
 
-  # Copy node_modules to the distribution folder during a build to ensure that
-  # third-party resources are available.
+  # copy main index.html file and other assets/*
   @config 'copy',
     release:
       files: [
