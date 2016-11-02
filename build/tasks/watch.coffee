@@ -2,16 +2,17 @@ module.exports = ->
   @loadNpmTasks 'grunt-contrib-watch'
 
   @config 'watch',
-    # run test on app scripts change & reload
+    options:
+      spawn: true
+      livereload: true
+
+    # reload scripts upon change
     scripts:
       files: [
         'app/**/*.js'
         'app/**/*.coffee'
       ]
 #      tasks: ['karma:daemon:run']
-      options:
-        spawn: false
-        livereload: true
 
     # copy files & reload on html change
     templates:
@@ -19,9 +20,6 @@ module.exports = ->
         'app/**/*.html'
       ]
       tasks: ['copy', 'karma:daemon:run']
-      options:
-        spawn: false
-        livereload: true
 
     styles:
       files: [
@@ -29,9 +27,6 @@ module.exports = ->
         'app/**/*.sass'
       ]
       tasks: ['sass', 'concat:development']
-      options:
-        spawn: false
-        livereload: true
 
     images:   # use ctrl+shift+R if reload does not work
       files: [
@@ -39,6 +34,7 @@ module.exports = ->
         'app/img/**/*.{png,jpg,gif}'
       ]
       tasks: ['imagemin']
-      options:
-        spawn: false
-        livereload: true
+
+#  grunt.event.on('watch', (action, filepath) ->
+#      console.log('--------------------------------------------- WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
+#  )

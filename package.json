@@ -6,7 +6,6 @@
     "brfs": "~1.4.3",
     "browserify-istanbul": "^2.0.0",
     "coffeeify": "~2.0.1",
-    "connect-livereload": "~0.6.0",
     "grunt": "~1.0.1",
     "grunt-browserify": "~5.0.0",
     "grunt-cli": "~1.2.0",

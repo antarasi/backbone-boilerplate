@@ -10,7 +10,7 @@ module.exports = ->
 
     development:
       options:
+        livereload: true
         middleware: (connect) -> [
-          require('connect-livereload')()
           require('serve-static')('dist')
         ]
