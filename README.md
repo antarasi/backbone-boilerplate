@@ -4,7 +4,9 @@ Comprehensive foundation for Backbone-based modular web application that works!
 ### Backbone + CoffeeScript + Browserify + SASS/SCSS + Image-min + Jasmine
 
 Based on **Grunt** task runner and created with latest versions of NPM dependencies.
-Application can consist of scripts written in **JavaScript** and **CoffeeScript** as well
+
+Application can consist of scripts written in **JavaScript** and **CoffeeScript** as well.
+
 This boilerplate contains Backbone application example with sample test specs to let you easily dive into the workflow.
 
 ## Getting started
@@ -43,6 +45,7 @@ Optionally:
 ### Running
 
 There are 3 main tasks to run:
+
 1. `npm start` (equivalent to `grunt development` or just `grunt`)
   - create browserify bundle
   - compile SASS
@@ -86,7 +89,9 @@ You can also place general purpose scripts (custom 404 view for instance) direct
 ### Backbone bootstraping
 
 Application root file is `app/main.js` that depends on `app/router.js` and all `app/modules/*` files that are bundled together using Browserify `require()` into `dist/bundle.js`.
+
 `main` is the default module that is invoked in `app/router.js`
+
  ```javascript
  index: function () {
      $(function() {
@@ -161,6 +166,7 @@ module.exports = Backbone.View.extend({
 ### Styles
 
 All styles (SASS / SCSS / CSS) sould be located in `app/styles/` dir to be properly compiled into `dist/css/style.css`.
+
 Task runner will create temporary `app/styles/compiled/` dir for SASS/SCSS equivalents in plain CSS with source maps.
 
 ### Images and assets
@@ -168,6 +174,7 @@ Task runner will create temporary `app/styles/compiled/` dir for SASS/SCSS equiv
 Images should be located in `app/img/` and `app/styles/img/` to be properly minified.
 
 `app/img/*` images will be relocated to `dist/img/`
+
 `app/styles/img/*` images will be relocated to `dist/css/img/`
 
 All other assets should be placed in `app/assets` dir and will be relocated to `dist/`.
@@ -176,7 +183,7 @@ Relocation respects original directory structure.
 
 ## Global libraries
 
-The reasons why I don't bundle libraries like jQuery or Backbone together with application scripts:
+3 reasons why I don't bundle libraries like jQuery or Backbone together with application scripts:
 
 1. Making libraries exposed as global variables makes your code simpler and cleaner. You no longer have to put `var Backbone = require('backbone')` in each header of your scripts.
 2. Encapsulating all libraries within one bundle.js significantly increases load time (~50%) at slower connections.
@@ -234,7 +241,9 @@ files: [
 ## Testing
 
 `Karma` is used as a test runner, `Jasmine` as test framework.
+
 Tests are run on `PhantomJS` - a headless WebKit based browser.
+
 You can change browser that runs test to:
 
  - Chrome
@@ -252,8 +261,11 @@ You can change browser that runs test to:
   a) change `browsers` from `PhantomJS` to `Chrome`
   b) change `plugins` from `karma-phantomjs-launcher` to `karma-chrome-launcher`
 
+
 You can write tests in `.js` and `.coffee` as well.
+
 Test specs (including examples) are located in `test/tests` dir.
+
 `npm build` and `npm test` tasks generate code coverage to `test/coverage` dir for each browser separately.
 
 ####
@@ -272,6 +284,9 @@ After running `npm start` task, Grunt watches your files for changes and refresh
 ## License
 
 Licensed under the MIT license.
+
 Inspired by @tbranyen and @quartzmo projects
+
 Created by Adrian Matylewicz @antarasi
+
 [![Adrian Matylewicz on LinkedIn](https://s.gravatar.com/avatar/d1e746ab1e3a3edd7b77b46be006753d?s=39)](https://pl.linkedin.com/in/adrian-matylewicz) [![Adrian Matylewicz on LinkedIn](http://www.antara.pl/img/footer/icon-linkedin.png)](https://pl.linkedin.com/in/adrian-matylewicz)
