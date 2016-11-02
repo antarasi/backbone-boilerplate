@@ -47,6 +47,7 @@ module.exports = ->
     daemon:
       options:
         port: 3001
+        background: true
         singleRun: false
         autoWatch: true
         # how long to wait (in ms) after any changes have occurred before starting the auto-watch again.

@@ -19,7 +19,7 @@ module.exports = ->
       files: [
         'app/**/*.html'
       ]
-      tasks: ['copy', 'karma:daemon:run']
+      tasks: ['copy']
 
     styles:
       files: [
@@ -34,7 +34,3 @@ module.exports = ->
         'app/img/**/*.{png,jpg,gif}'
       ]
       tasks: ['imagemin']
-
-#  grunt.event.on('watch', (action, filepath) ->
-#      console.log('--------------------------------------------- WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW')
-#  )
