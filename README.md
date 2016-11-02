@@ -256,9 +256,13 @@ You can change browser that runs test to:
 #### Changing to Google Chrome example:
 
 1. Install Chrome launcher
+
   `npm install --save-dev karma-chrome-launcher`
+  
 2. Edit `build/tasks/karma.coffee`:
+
   a) change `browsers` from `PhantomJS` to `Chrome`
+  
   b) change `plugins` from `karma-phantomjs-launcher` to `karma-chrome-launcher`
 
 
