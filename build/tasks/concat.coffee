@@ -5,4 +5,4 @@ module.exports = ->
   @config 'concat',
     development:
       files:
-        'dist/css/style.css': ['app/styles/compiled/*.css']
+        'dist/css/style.css': ['app/styles/**/*.css']
