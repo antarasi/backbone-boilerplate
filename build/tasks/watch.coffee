@@ -6,20 +6,18 @@ module.exports = ->
       spawn: true
       livereload: true
 
-    # reload scripts upon change
     scripts:
       files: [
         'app/**/*.js'
         'app/**/*.coffee'
       ]
-#      tasks: ['karma:daemon:run']
+    # task is supported by browserify itself
 
-    # copy files & reload on html change
     templates:
       files: [
         'app/**/*.html'
       ]
-      tasks: ['copy']
+      tasks: ['copy:index']
 
     styles:
       files: [
@@ -34,3 +32,9 @@ module.exports = ->
         'app/img/**/*.{png,jpg,gif}'
       ]
       tasks: ['imagemin']
+
+    assets:
+      files: [
+        'app/assets/**'
+      ]
+      tasks: ['copy:assets']

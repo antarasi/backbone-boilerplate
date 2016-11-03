@@ -1,3 +1,5 @@
+![](https://raw.githubusercontent.com/antarasi/backbone-boilerplate/master/app/assets/github/boilingplate.jpg)
+
 # Backbone Boilerplate
 
 Comprehensive foundation for Backbone-based modular web application that works!
@@ -258,11 +260,11 @@ You can change browser that runs test to:
 1. Install Chrome launcher
 
   `npm install --save-dev karma-chrome-launcher`
-  
+
 2. Edit `build/tasks/karma.coffee`:
 
   a) change `browsers` from `PhantomJS` to `Chrome`
-  
+
   b) change `plugins` from `karma-phantomjs-launcher` to `karma-chrome-launcher`
 
 
@@ -274,16 +276,17 @@ Test specs (including examples) are located in `test/tests` dir.
 
 ####
 
-## Watch
+## Watch & Reload
 
 After running `npm start` task, Grunt watches your files for changes and refreshes browser contents with livereload when needed.
 
- - `app/*.js` or `app/*.coffee` changes => `dist/bundle.js` is created and reloaded
- - `app/*.html` template changes => `dist/bundle.js` is created and reloaded
- - `app/*.scss` or `app/*.sass` style changes => SASS compiles to `dist/css/style.css`
- - `app/style/img/*` images changes => png, jpg and gif files are minified into `dist/css/img/`
- - `app/img/*` images changes => png, jpg and gif files are minified into `dist/img`
- - `test/tests/*.js` or `test/tests/*.coffee` changes => test are run
+ - `app/*.js` or `app/*.coffee` changes ==> `dist/bundle.js` is created (+livereload)
+ - `app/*.html` template changes ==> `dist/bundle.js` is created (+livereload)
+ - `app/*.scss` or `app/*.sass` style changes ==> SASS compiles to `dist/css/style.css` (+livereload)
+ - `app/style/img/*` image changes ==> png, jpg and gif files are minified into `dist/css/img/` (+livereload)
+ - `app/img/*` image changes ==> png, jpg and gif files are minified into `dist/img` (+livereload)
+ - `app/assets/*` file changes ==> asset files are relocated to `dist/` (+livereload)
+ - `test/tests/*.js` or `test/tests/*.coffee` changes ==> test are run
 
 ## License
 
