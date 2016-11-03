@@ -26,7 +26,6 @@
     "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.2",
     "phantomjs": "^2.1.7",
-    "serve-static": "~1.11.1",
     "uglifyify": "~3.0.1"
   },
   "scripts": {

@@ -7,10 +7,8 @@ module.exports = ->
       port: 3000
       open: true
       base: 'dist'
+      directory: 'dist'
 
     development:
       options:
         livereload: true
-        middleware: (connect) -> [
-          require('serve-static')('dist')
-        ]
